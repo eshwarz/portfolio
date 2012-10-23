@@ -6,9 +6,6 @@
 // Define a site root.
 // Router::root('home#index');
 
-Router::root('test#index');
-Router::match('test_page', 'test#index', 'test');
-Router::match('test_posts', 'test#posts', 'test_posts');
-Router::match('test_form', 'test#forms', 'test_form');
+Router::root('home#index');
 
 ?>
