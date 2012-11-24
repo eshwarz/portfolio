@@ -4,6 +4,10 @@
 
 require_js('less');
 require_js('jquery');
+require_js('jquery-ui');
 
+require_js('mouse_wheel');
+require_js('slider');
+require_js('scrollbar');
 
 ?>

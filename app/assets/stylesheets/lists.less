@@ -1,0 +1,37 @@
+@import 'mixins';
+
+ul.items {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	li {
+		line-height: 18px;
+		border-bottom: 1px solid #555;
+		padding: 5px;
+		clear: both;
+		.image {
+			float: left;
+			margin-right: 5px;
+		}
+		.item_content_right_pane {
+			float: left;
+			width: 254px;
+		}
+		&:hover {
+			background: #444;
+		}
+	}
+}
+
+ul.main_list {
+	padding: 0px;
+	li {
+		line-height: 26px;
+		margin-top: 10px;
+		padding: 2px 0px 5px 55px;
+		font-size: 20px;
+		list-style-type: none;
+		background: url('../../assets/images/icons/main_list.png') 0px 0px no-repeat;
+		.text_shadow;
+	}
+}

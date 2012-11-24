@@ -54,12 +54,12 @@ function require_css($file) {
 }
 
 function link_to($text, $url, $params = array()) {
-	$link = '<a href="'.SERVER_PATH.$url.'" '.array_to_params($params).'>'.$text.'</a>';
+	$link = '<a href="'.$url.'" '.array_to_params($params).'>'.$text.'</a>';
 	echo $link;
 }
 
 function redirect_to($path) {
-	header('Location:'.SERVER_PATH.$path);
+	header('Location:'.$path);
 }
 
 function humanize($str) {
@@ -69,6 +69,17 @@ function humanize($str) {
 	$str = explode(' ', $str);
 	$str = array_map('ucwords', $str);
 	return implode(' ', $str);
+}
+
+//to escape apostrophe and slashes, etc.
+function escape_data ($data) 
+{
+	if (ini_get('magic_quotes_gpc')) 
+	{
+		$data = stripslashes($data);
+	}
+	$data = str_replace("\n","<br>",$data);
+	return mysql_real_escape_string(trim($data), $con);
 }
 
 // used once

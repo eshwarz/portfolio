@@ -1,3 +1,3 @@
 <footer>
-	Copyright &copy 2012 Fly PHP. All Rights reserved
+	Copyright &copy 2012 Pavani Eshwar. All Rights reserved
 </footer>
