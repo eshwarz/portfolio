@@ -7,18 +7,15 @@ if ($_GET['failed'] == 1) {
 
 if ($_GET['success'] == 1) {
 	?>
-	<center class="error">Succesfully Created New User!</center>
+	<center class="success">Succesfully Created New User!</center>
 	<?php
 }
 ?>
 
-<?php
-View::render( array( 'partial' => 'test/header', 'locals' => array( 'title' => $title ) ) );
-?>
-
-<h2 class="center">Sign In</h2>
-<div style="width: 500px; margin: auto;">
-	<?php
+<div class="left_panel full_width">
+	<h1 class="page_header left tc">Sign In</h1>
+	<div style="width: 500px; margin: auto; padding: 20px;">
+		<?php
 		$form = new Form('User');
 		echo $form->form_tag( array( 'action' => 'create', 'method' => 'POST', 'validate' => 'true' ));
 		echo $form->input( 'email', array( 'placeholder' => 'Email Address', 'validate' => 'true' ) );
@@ -27,9 +24,7 @@ View::render( array( 'partial' => 'test/header', 'locals' => array( 'title' => $
 		echo $form->format('', Form::submit(array( 'value' => 'Sign In' )));
 		echo $form->end_form();
 
-	?>
-
-	<?php
-	View::render(array('partial' => 'shared/authentication_links'));
-	?>
+		View::render(array('partial' => 'shared/authentication_links'));
+		?>
+	</div>
 </div>

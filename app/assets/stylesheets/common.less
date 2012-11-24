@@ -22,7 +22,13 @@ body {
 	background-color: #c8c8c8;
 	float: left;
 	.radius(9px 0px 0px 9px);
+	&.full_width {
+		min-height: auto;
+		width: 959px !important;
+		.radius(9px);
+	}
 }
+
 .right_panel { width: 309px; height: 530px; color: #AAA; float: left; border-left: 1px solid #171717; }
 /*container css*/
 
@@ -41,7 +47,7 @@ body {
 	display: block;
 	border-top: 1px solid #CCC;
 	.box_shadow(0px 0px 2px #000);
-	&:hover, &:focus { background: #BBB; border-top: 1px solid #DDD; outline-style: none; }
+	&:hover, &:focus { background: #BBB; border-top: 1px solid #DDD; outline-style: none; text-decoration: underline; }
 	&:active { background: #999; border-bottom: 1px solid #BBB; border-top: 0px solid #BBB; .box_shadow(inset 0px 0px 2px #000);}
 }
 /*left_panel_links*/
@@ -116,15 +122,30 @@ h1, h2, h3 {
 	&.left {
 		background: #DDD;
 		.gradient(#FFFFFF, #DDDDDD);
-		border-radius: 10px 0px 0px 0px;
+		.radius(10px 0px 0px 0px);
 		border-bottom: 1px solid #999;
 	}
 	&.right {
 		color: #FFF;
 		background: #444;
 		.gradient(#666666, #444444);
-		border-radius: 0px 10px 0px 0px;
+		.radius(0px 10px 0px 0px);
 		border-bottom: 1px solid #222;
 		.text_shadow(1px 1px 1px #000);
 	}
+}
+
+.full_width {
+	.page_header {
+		&.left {
+			.radius(10px 10px 0px 0px);
+		}
+	}
+}
+
+.error, .success {
+	padding: 10px;
+	background: #333;
+	color: #FFF;
+	.radius(9px);
 }

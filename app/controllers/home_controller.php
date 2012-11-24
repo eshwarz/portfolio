@@ -2,7 +2,7 @@
 class HomeController extends ApplicationController {
 
 	public function before_filter() {
-		User::authenticate( array('only' => array('about')) );
+		User::authenticate( array('only' => array('blog')) );
 	}
 
 	public function index() {
