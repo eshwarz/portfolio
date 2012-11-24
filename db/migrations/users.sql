@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
-  `password` int(11) NOT NULL,
-  `image` int(11) NOT NULL,
+  `password` varchar(225) NOT NULL,
+  `image` varchar(500) NOT NULL,
   `sex` int(2) NOT NULL COMMENT '1 for male 2 for female',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`,`sex`)

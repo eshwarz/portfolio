@@ -2,17 +2,25 @@
 
 class User extends ActiveRecord\Model {
 	
+	static $validates_presence_of = array(array('first_name'), array('last_name'), array('email'), array('password'), array('sex'));
+	static $validates_uniqueness_of = array(array('email'));
+
+	public static function genders() {
+		return array( array('Male', 1), array('Female', 2) );
+	}
+
+
 	public static function authenticate($options) {
 		
 		$flag = static::checkOptions($options);
 		if ($flag == 1) {
-			if (isset($_COOKIE['pavsesh_user']) && isset($_COOKIE['pavsesh_timezone']))
+			if (isset($_COOKIE['fly_user']) && isset($_COOKIE['fly_timezone']))
 			{
-				$_SESSION['pavsesh_user'] = $_COOKIE['pavsesh_user'];
-				$_SESSION['pavsesh_timezone'] = $_COOKIE['pavsesh_timezone'];
+				$_SESSION['fly_user'] = $_COOKIE['fly_user'];
+				$_SESSION['fly_timezone'] = $_COOKIE['fly_timezone'];
 			}
 
-			$uid = $_SESSION['pavsesh_user'];
+			$uid = $_SESSION['fly_user'];
 
 			if (!$uid)
 			{
@@ -21,8 +29,7 @@ class User extends ActiveRecord\Model {
 					$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 					$_SESSION['redirect'] = $url;
 				}
-				redirect_to(sign_in_path);
-				// die("User not logged in! :(");
+				redirect_to(user_sign_in_path);
 			}
 
 		}
@@ -47,5 +54,4 @@ class User extends ActiveRecord\Model {
 	}
 
 }
-
 ?>
