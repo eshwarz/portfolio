@@ -17,6 +17,18 @@ class Form {
 		if (isset($options['url'])) {
 			$url = $options['url'];
 			unset($options['url']);
+
+			// default method is set to post.
+			if (!isset($options['method'])) {
+				$options['method'] = 'post';
+			}
+
+			// include multipart form data.
+			if ($options['multipart'] == true) {
+				$options['enctype'] = 'multipart/form-data';
+				unset($options['multipart']);
+			}
+
 			$form = '<form action="'.$url.'" '.array_to_params($options).'>';
 		}
 		elseif (isset($options['action'])) {
@@ -45,7 +57,7 @@ class Form {
 		unset($params['as']);
 
 		// text and password
-		if ($type == 'text' || $type == 'password') {
+		if ($type == 'text' || $type == 'password' || $type == 'hidden') {
 			$input = '<input type="'.$type.'" name="'.$name.'" '.array_to_params($params).' />';
 		}
 
@@ -103,18 +115,23 @@ class Form {
 			}
 		}
 
-		$output = '
-			<div class="element">
-				<label for="'.$id.'" >'.$label;
-		
-		if ($validate == 'true')
-			$output .= '<span>*</span>';
+		if ($type == 'hidden') {
+			$output = $input;
+		} else {
+			$output = '
+				<div class="element">
+					<label for="'.$id.'" >'.$label;
+			
+			if ($validate == 'true')
+				$output .= '<span>*</span>';
 
-		$output .= '</label>
-				<div class="input_controls">'.$input.'</div>
-				<div class="clearfix"></div>
-			</div>
-		';
+			$output .= '</label>
+					<div class="input_controls">'.$input.'</div>
+					<div class="clearfix"></div>
+				</div>
+			';
+		}
+		
 		return $output;
 	}
 

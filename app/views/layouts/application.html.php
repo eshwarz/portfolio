@@ -29,7 +29,7 @@
 			</div>
 		</div>
 
-		<?php View::render( array( 'partial' => 'shared/footer' ) ); ?>
+		<?php render (array('partial' => 'shared/footer')); ?>
 
 	</body>
 </html>

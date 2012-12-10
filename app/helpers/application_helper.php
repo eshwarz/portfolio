@@ -25,4 +25,9 @@ function current_user() {
 		return false;
 	}
 }
+
+function render($options) {
+	View::render($options);
+}
+
 ?>

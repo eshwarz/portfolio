@@ -8,7 +8,7 @@ class HomeController extends ApplicationController {
 	public function index() {
 		
 		$home = 'true';
-		View::render(array('view' => 'index', 'locals' => array('title' => "Eshwar's Portfolio", 'intro' => $intro, 'home' => $home)));
+		render (array('view' => 'index', 'locals' => array('title' => "Eshwar's Portfolio", 'intro' => $intro, 'home' => $home)));
 
 	}
 
@@ -23,7 +23,7 @@ class HomeController extends ApplicationController {
 			</p>";
 
 		$locals = array('title' => 'Eshwar - About', 'about' => $about, 'info' => $info);
-		View::render( array( 'view' => 'about', 'locals' => $locals ) );
+		render (array( 'view' => 'about', 'locals' => $locals));
 	}
 
 }

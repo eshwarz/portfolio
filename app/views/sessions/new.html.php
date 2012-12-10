@@ -24,7 +24,7 @@ if ($_GET['success'] == 1) {
 		echo $form->format('', Form::submit(array( 'value' => 'Sign In' )));
 		echo $form->end_form();
 
-		View::render(array('partial' => 'shared/authentication_links'));
+		render (array('partial' => 'shared/authentication_links'));
 		?>
 	</div>
 </div>

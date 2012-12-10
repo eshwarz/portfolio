@@ -21,10 +21,8 @@ if ($_GET['email'] == 'exists') {
 
 			echo $form->format('', Form::submit(array( 'value' => 'Sign Up' )));
 			echo $form->end_form();
-		?>
-
-		<?php
-		View::render(array('partial' => 'shared/authentication_links'));
+			
+			render (array('partial' => 'shared/authentication_links'));
 		?>
 	</div>
 </div>
