@@ -3,7 +3,7 @@
 session_start();
 
 // default emvironment is set to development
-define ('ENV', 'development');
+define ('ENV', 'production');
 define ('SERVER_NAME', $_SERVER['SERVER_NAME']);
 define ('SERVER_PATH', 'http://' . SERVER_NAME . '/');
 define ('ROOT', str_replace('\\', '/', dirname(realpath(__FILE__))) . '/');
@@ -16,9 +16,8 @@ define ('VENDOR_JS_PATH', SERVER_PATH.'vendor/assets/javascripts/');
 require_once 'config/fly.php';
 debug();
 
-$uri = $_SERVER['PATH_INFO'];
+$uri = $_SERVER['REQUEST_URI'];
 Registry::set('uri', $uri);
 
 Router::dispatch();
-
 ?>

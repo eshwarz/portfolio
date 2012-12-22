@@ -9,7 +9,7 @@ $cfg->set_connections(
 	array(
 		'development' => $con['development'],
 		// 'test' => $con['test'],
-		// 'production' => $con['production']
+		'production' => $con['production']
 	)
 );
 $cfg->set_default_connection($con['default']);
