@@ -1,10 +1,10 @@
 @import 'mixins';
 
-ul.items {
+ul.items, .right_links {
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
-	li {
+	li, a {
 		line-height: 18px;
 		border-bottom: 1px solid #555;
 		padding: 5px;
@@ -35,3 +35,84 @@ ul.main_list {
 		.text_shadow;
 	}
 }
+
+/* portfolio */
+.portfolio {
+	.item {
+		float: left;
+		padding: 8px;
+		width: 238px;
+		margin-bottom: 40px;
+		.box_shadow(0px 0px 5px #000);
+		.radius();
+		.cover {
+		}
+		.image {
+			width: 238px;
+			height: 180px;
+			.radius(4px);
+			.box_shadow(0px 0px 10px #000 inset);
+			&.crazychums {
+				background: url('/app/assets/images/sites/crazychums.gif');
+			}
+			&.sureify {
+				background: url('/app/assets/images/sites/sureify.gif');
+			}
+			&.startup_quotient {
+				background: url('/app/assets/images/sites/startup_quotient.gif');
+			}
+			&.autocube {
+				background: url('/app/assets/images/sites/autocube.gif');
+			}
+			&.learnsocial {
+				background: url('/app/assets/images/sites/learnsocial.gif');
+			}
+			&.vadaanya {
+				background: url('/app/assets/images/sites/vadaanya.gif');
+			}
+			&.snakemania {
+				background: url('/app/assets/images/sites/snake.gif');
+			}
+			&.fly {
+				background: url('/app/assets/images/sites/fly.gif');
+			}
+			&.e_commerce {
+				background: url('/app/assets/images/sites/e_commerce.gif');
+			}
+			&.dark_design {
+				background: url('/app/assets/images/sites/dark_design.jpg');
+			}
+		}
+		.description {
+			margin-top: 5px; 
+		}
+	}
+	/* panel styling */
+	&.left {
+		.item {
+			background: #333;
+			color: #FFF;
+			margin-left:32px;
+			margin-right:18px;
+		}
+		.description {
+			.text_shadow(2px 2px 2px #000);
+		}
+	}
+	&.right {
+		.item {
+			background: #C8C8C8;
+			color: #333;
+			margin-left:28px;
+			margin-right:28px;
+			&.first {
+				margin-top: 47px;
+			}
+		}
+		.description {
+			.text_shadow(2px 2px 2px #777);
+		}
+	}
+}
+
+/* portfolio */

@@ -15,5 +15,5 @@ require_css('sprites');
 require_css('lists');
 require_css('home');
 require_css('slider');
-
+require_css('contact');
 ?>

@@ -91,5 +91,5 @@ s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
 .lh65 {line-height: 65px;}
 
 .navbar-search {
-    margin-top: 5px !important;
+	margin-top: 5px !important;
 }

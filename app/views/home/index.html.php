@@ -30,6 +30,14 @@
 					<?php echo image_tag('icons/ruby.png'); ?>
 					<div class="desc">Ruby</div>
 				</div>
+				<div class="image">
+					<?php echo image_tag('icons/js.png'); ?>
+					<div class="desc">JavaScript</div>
+				</div>
+				<div class="image">
+					<?php echo image_tag('icons/jquery.png'); ?>
+					<div class="desc">jQuery</div>
+				</div>
 				<div>
 					<div class="clearfix"></div>
 				</div>
@@ -42,9 +50,6 @@
 <div class="right_panel">
 	<h1 class="page_header right tc">Twitter Updates</h1>
 	<div class="scrollbar" style="height: 479px;">
-		<?php
-		View::render( array( 'partial' => 'tweets' ) );
-		?>
+		<?php View::render( array( 'partial' => 'tweets' ) ); ?>
 	</div>
-		
 </div>

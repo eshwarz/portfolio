@@ -1,0 +1,70 @@
+@import 'mixins';
+
+.bottom_line() {
+	border-bottom: 1px solid #383838;
+}
+.top_line() {
+	border-top: 1px solid #000;
+}
+.card_hover() {
+	background: #444 url('../images/grain_hover.jpg') repeat;
+}
+
+.contact_card {
+	background: #111 url('../images/grain.jpg') repeat;
+	margin: 50px 100px;
+	.radius();
+	.box_shadow(20px 10px 10px #555);
+	color: #FFF;
+	.header {
+		padding: 20px;
+		.bottom_line();
+		.radius(5px 5px 0px 0px);
+		&:hover {
+			.card_hover();
+		}
+	}
+	.footer {
+		padding: 20px;
+		.top_line();
+		.radius(0px 0px 5px 5px);
+		&:hover {
+			.card_hover();
+		}
+	}
+	.header_text, .footer_text {
+		line-height: 32px;
+		display: block;
+		margin-left: 20px;
+		font-size: 18px;
+	}
+	.content {
+		.top_line();
+		.bottom_line();
+		padding: 10px 20px;
+		&:hover {
+			.card_hover();
+		}
+		.address {
+			margin-left: 20px;
+			p {
+				margin: 5px 0px;
+			}
+		}
+	}
+	a {
+		color: #FFF;
+		border: 0px;
+	}
+}
+.right_links {
+	a {
+		display: block;
+		.link_text {
+			line-height: 24px;
+			margin-left: 10px;
+		}
+		padding: 5px 20px;
+		border: 0px;
+	}
+}

@@ -11,5 +11,6 @@ require_js('slider');
 require_js('scrollbar');
 require_js('form_validation');
 require_js('auto_hide_flashes');
+require_js('dropdown');
 
 ?>

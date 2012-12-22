@@ -5,7 +5,7 @@
 		<meta name="keywords" content="eshwar, pavani, pavesh, pavsesh, eshwar chandra, pavani kumari, eshwar chandra y k, pavani kumari s" />
 		<meta name="description" content="Eshwar Chandra's portfolio, blog, events etc." />
 		
-		<title><?php echo $title; ?></title>
+		<title><?php echo isset($title) ? $title : "Eshwar's Portfolio"; ?></title>
 		<?php 
 		require_once ($ROOT."app/assets/stylesheets/css.php");
 		require_once ($ROOT."app/assets/favicon/favicon.php");
