@@ -15,7 +15,7 @@
 		<?php echo $form->form_tag(array('action' => 'create', 'method' => 'post')) ?>
 			<div>
 				<h3>Please write the post below</h3>
-				<?php echo $form->input('uid', array('as' => 'hidden', 'value' => $_SESSION['fly_user'])) ?>
+				<?php echo $form->input('uid', array('as' => 'hidden', 'value' => $_SESSION['pavsesh_user'])) ?>
 				<div>
 					<textarea id="post" name="Post[post]" rows="15" cols="80" style="width: 100%" class="tinymce">
 						Write your post here...
