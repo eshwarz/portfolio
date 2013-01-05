@@ -25,11 +25,23 @@
 	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{start}', endColorstr='@{end}', GradientType=0)";
 }
 
+/* application related mixins */
 @icon: url('../../assets/images/sprties/main.png');
+
 .icon() {
 	background-image: @icon;
 }
 
 .text_shadow(@shadow: 1px 1px 1px #AAA) {
 	text-shadow: @shadow;
+}
+
+.hoverable_item() {
+	line-height: 18px;
+	border-bottom: 1px solid #555;
+	padding: 5px;
+	clear: both;
+	&:hover {
+		background: #444;
+	}
 }

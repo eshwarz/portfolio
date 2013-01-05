@@ -185,3 +185,30 @@ h1, h2, h3 {
 .mlm,.mhm,.mam { margin-left:10px !important }
 .mll,.mhl,.mal { margin-left:20px !important }
 /* basic css */
+
+.image {
+	position: relative;
+	.name {
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		color: #FFF;
+		background: rgba(0, 0, 0, 0.5);
+		width: 100px;
+		padding: 5px 0px;
+		display: none;
+		text-align: center;
+		border: none;
+		.box_shadow(0px 0px 2px #000);
+	}
+	&:hover {
+		.name {
+			display: block;
+			border: none;
+		}
+	}
+}
+
+.param_details {
+	margin-left: 120px;
+}

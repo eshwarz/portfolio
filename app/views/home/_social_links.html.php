@@ -1,5 +1,5 @@
 <h1 class="page_header right tc">Contact Links</h1>
-<div class="right_links">
+<div class="stacked_links">
 	<?php
 	echo Helper::social_link('mailto:eshwarcc@gmail.com', 'gmail.png', 'eshwarcc@gmail.com');
 	echo Helper::social_link('#', 'skype.png', 'eshwarzworld');

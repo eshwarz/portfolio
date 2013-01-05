@@ -7,5 +7,7 @@
 
 <div class="right_panel">
 	<h1 class="page_header right tc"></h1>
-	
+	<div class="stacked_links">
+		<?php echo link_to('New Blog Post', new_post_path) ?>
+	</div>
 </div>	

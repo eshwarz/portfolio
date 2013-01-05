@@ -10,17 +10,17 @@ class User extends ActiveRecord\Model {
 	}
 
 
-	public static function authenticate($options) {
+	public static function authenticate($options = NULL) {
 		
 		$flag = static::checkOptions($options);
 		if ($flag == 1) {
-			if (isset($_COOKIE['fly_user']) && isset($_COOKIE['fly_timezone']))
+			if (isset($_COOKIE['pavsesh_user']) && isset($_COOKIE['pavsesh_timezone']))
 			{
-				$_SESSION['fly_user'] = $_COOKIE['fly_user'];
-				$_SESSION['fly_timezone'] = $_COOKIE['fly_timezone'];
+				$_SESSION['pavsesh_user'] = $_COOKIE['pavsesh_user'];
+				$_SESSION['pavsesh_timezone'] = $_COOKIE['pavsesh_timezone'];
 			}
 
-			$uid = $_SESSION['fly_user'];
+			$uid = $_SESSION['pavsesh_user'];
 
 			if (!$uid)
 			{
@@ -49,6 +49,10 @@ class User extends ActiveRecord\Model {
 			$key = array_search($action, $options['except']);
 			if (is_bool($key))
 				$flag = 1;
+		}
+		// authentication required for all the methods in a controller if no arguments are passed.
+		elseif ($options == NULL) {
+			$flag = 1;
 		}
 		return $flag;
 	}

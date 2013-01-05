@@ -1,14 +1,11 @@
 @import 'mixins';
 
-ul.items, .right_links {
+ul.items {
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
-	li, a {
-		line-height: 18px;
-		border-bottom: 1px solid #555;
-		padding: 5px;
-		clear: both;
+	li {
+		.hoverable_item();
 		.image {
 			float: left;
 			margin-right: 5px;
@@ -16,9 +13,6 @@ ul.items, .right_links {
 		.item_content_right_pane {
 			float: left;
 			width: 254px;
-		}
-		&:hover {
-			background: #444;
 		}
 	}
 }
@@ -113,6 +107,9 @@ ul.main_list {
 			.text_shadow(2px 2px 2px #777);
 		}
 	}
+}
+.beautify_params {
+	margin-bottom: 10px;
 }
 
 /* portfolio */

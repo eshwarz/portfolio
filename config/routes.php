@@ -12,9 +12,14 @@ Router::root( 'home#index' );
 	// home controller
 	Router::match('about', 'home#about', 'about');
 	Router::match('portfolio', 'home#portfolio', 'portfolio');
-	Router::match('blog', 'home#blog', 'blog');
+	Router::match('blog', 'posts#index', 'blog');
 	Router::match('contact', 'home#contact', 'contact');
 	// Router::match('users/sign_in', 'users#sign_in', 'sign_in');
+}
+
+{
+	// posts controller
+	Router::match('posts/_new', 'posts#_new', 'new_post');
 }
 
 {

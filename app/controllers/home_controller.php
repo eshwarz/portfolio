@@ -2,14 +2,12 @@
 class HomeController extends ApplicationController {
 
 	public function before_filter() {
-		// User::authenticate( array('only' => array('blog')) );
+		User::authenticate( array('only' => array('blog')) );
 	}
 
 	public function index() {
-		
 		$home = 'true';
 		render (array('view' => 'index', 'locals' => array('title' => "Eshwar's Portfolio", 'intro' => $intro, 'home' => $home)));
-
 	}
 
 	public function about() {

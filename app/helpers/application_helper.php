@@ -91,4 +91,13 @@ function render($options) {
 	View::render($options);
 }
 
+function beautify_params($key, $value, $key_width = 200) {
+	$item = "
+	<div class='clearfix beautify_params'>
+		<div class='fl fb' style='width: {$width}px;'>{$key}</div>
+		<div style='margin-left: {$key_width}px;'>{$value}</div>
+	</div>
+	";
+	return $item;
+}
 ?>
