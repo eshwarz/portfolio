@@ -10,7 +10,7 @@
 				echo Helper::portfolio_link('http://dev.autocube.com', 'autocube', 'Autocube is a social networking site for cars, share pics, buy, sell cars ...');
 				echo Helper::portfolio_link('http://www.vadaanya.org', 'vadaanya', 'Vadaanya Janaa Society is an orphanage maintainance website ...');
 				echo Helper::portfolio_link('#', 'e_commerce', 'Software for business, which takes care of the customers and bills ...');
-				echo Helper::portfolio_link('http://www.learnsocial.com/', 'learnsocial', 'Learn or teach online, locate the nearest class and attend ...');
+				echo Helper::portfolio_link('http://beta.learnsocial.com/', 'learnsocial', 'Learn or teach online, locate the nearest class and attend ...');
 				?>
 				<div class="clearfix"></div>
 			</div>
