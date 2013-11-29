@@ -12,6 +12,7 @@
 		?>
 	</head>
 	<body class="container">
+		<? render (array('partial' => 'shared/google_analytics')); ?>
 		{{yield}}
 		<?php render (array('partial' => 'shared/footer')); ?>
 	</body>

@@ -14,6 +14,7 @@
 
 	</head>
 	<body>
+		<? render (array('partial' => 'shared/google_analytics')); ?>
 		<div class="ma topBarWidth">
 
 			<?php

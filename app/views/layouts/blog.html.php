@@ -15,8 +15,9 @@
 
 	</head>
 	<body>
-		<div class="ma topBarWidth">
+		<? render (array('partial' => 'shared/google_analytics')); ?>
 
+		<div class="ma topBarWidth">
 			<?php
 			$locals = array('home' => $home, 'about' => $about, 'portfolio' => $portfolio, 'blog' => $blog, 'network' => $network, 'contact' => $contact);
 			View::render( array( 'partial' => 'shared/header', 'locals' => $locals ) );
